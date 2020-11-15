@@ -20,6 +20,7 @@ class Api::V1::StudentsController < ApplicationController
       render json: @student
     else
       render json: {error: "Oops! There was an error creating this student."}
+    end
   end
 
 
