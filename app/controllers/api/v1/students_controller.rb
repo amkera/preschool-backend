@@ -30,9 +30,6 @@ class Api::V1::StudentsController < ApplicationController
   end
 
 
-
-
-
   private
 
   def student_params

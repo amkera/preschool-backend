@@ -20,19 +20,13 @@ class Api::V1::PaymentsController < ApplicationController
       render json: @payment
     else
       render json: {error: "Oops! There was an error creating this payment."}
-    end 
+    end
   end
 
   # def destroy
   #   find_payment
   #   @payment.destroy
   # end
-
-
-
-
-
-
 
 
   private
