@@ -13,3 +13,8 @@ Payment belongs_to :student
   :date is a datetime
   :amount is an float
   :paid is a boolean
+
+Some db tricks, to reset the database and begin counting from id=1:
+> rake db:drop
+> rake db:migrate
+> rake db:seed

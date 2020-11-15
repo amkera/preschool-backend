@@ -3,4 +3,5 @@ class Payment < ApplicationRecord
 
   validates :amount, presence: true
   validates_inclusion_of :paid, :in => [true, false]
+  
 end
