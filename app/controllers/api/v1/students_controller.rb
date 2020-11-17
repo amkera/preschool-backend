@@ -1,7 +1,7 @@
 class Api::V1::StudentsController < ApplicationController
 
   def index
-    
+
     @students = Student.all
     render json: @students
   end
@@ -16,7 +16,8 @@ class Api::V1::StudentsController < ApplicationController
 
 
   def create
-    @student = Student.new(account_params)
+    binding.pry
+    @student = Student.new(student_params)
     if @student.save
       render json: @student
     else
