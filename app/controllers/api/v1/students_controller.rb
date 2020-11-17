@@ -1,7 +1,6 @@
 class Api::V1::StudentsController < ApplicationController
 
   def index
-
     @students = Student.all
     render json: @students
   end
@@ -10,13 +9,12 @@ class Api::V1::StudentsController < ApplicationController
   def show
     find_student
     render json: @student
-
   end
   #api/v1/student/1
 
 
   def create
-    binding.pry
+    #binding.pry
     @student = Student.new(student_params)
     if @student.save
       render json: @student
