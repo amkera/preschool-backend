@@ -25,10 +25,13 @@ class Api::V1::PaymentsController < ApplicationController
   #rendering the student in JSON renders the student whos payment was just created
 
 
-  # def destroy
-  #   find_payment
-  #   @payment.destroy
-  # end
+  def destroy
+    @payment = Payment.find(params["id"])
+    @student = Student.find(@payment.student_id)
+    @payment.destroy
+    #binding.pry
+    render json: @student
+  end
 
 
   private
