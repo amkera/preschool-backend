@@ -17,11 +17,13 @@ class Api::V1::PaymentsController < ApplicationController
   def create
     @payment = @student.payments.new(payment_params)
     if @payment.save
-      render json: @payment
+      render json: @student
     else
       render json: {error: "Oops! There was an error creating this payment."}
     end
   end
+  #rendering the student in JSON renders the student whos payment was just created
+
 
   # def destroy
   #   find_payment
