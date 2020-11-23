@@ -3,5 +3,10 @@ class Payment < ApplicationRecord
 
   validates :amount, presence: true
   validates_inclusion_of :paid, :in => [true, false]
-  
+
+  # def formatted_date
+  #   self.paid.strftime("%b %d, %Y")
+  # end
+
+
 end
