@@ -15,6 +15,7 @@ class Api::V1::PaymentsController < ApplicationController
   end
 
   def create
+    #binding.pry
     @payment = @student.payments.new(payment_params)
     if @payment.save
       render json: @student
