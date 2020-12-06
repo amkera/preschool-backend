@@ -13,7 +13,6 @@ class Api::V1::StudentsController < ApplicationController
 
 
   def create
-    binding.pry
     @student = Student.new(student_params)
     if @student.save
       render json: @student
